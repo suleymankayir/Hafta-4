@@ -13,10 +13,20 @@ public class Weapon {
 
     public static Weapon[] weapons(){
         Weapon[] weaponsList = new Weapon[3];
-        weaponsList[0] = new Weapon("Tabanca",1,2,25);
+        weaponsList[0] = new Weapon("Tabanca",1,2,10);
         weaponsList[1] = new Weapon("Kılıç",2,3,35);
         weaponsList[2] = new Weapon("Tüfek",3,7,45);
         return weaponsList;
+    }
+
+    public static Weapon getWeaponObjByID(int id){
+        for (Weapon w : Weapon.weapons()){
+            if (w.getId()== id){
+                return w;
+            }
+        }
+
+        return null;
     }
 
     public int getId() {
