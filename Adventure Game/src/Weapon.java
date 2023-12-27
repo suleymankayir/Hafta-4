@@ -1,4 +1,5 @@
 public class Weapon {
+    public static int[] weapons;
     private String name;
     private int id;
     private int damage;
