@@ -59,7 +59,7 @@ public abstract class BattleLoc extends Location {
             playerStats();
             obstacleStats(i);
             while (this.getPlayer().getHealth() > 0 && this.getObstacle().getHealth() > 0) {
-                hitChance = (int)(Math.random()*9+1);
+                hitChance = (int) (Math.random() * 9 + 1);
                 System.out.print("<V>ur veya <K>aç: ");
                 String selectCombat = scanner.nextLine().toUpperCase();
                 if (selectCombat.equals("V")) {
@@ -105,8 +105,9 @@ public abstract class BattleLoc extends Location {
 
     public int snakeDamage() {
         Random r = new Random();
-        return r.nextInt(4) +  3;
+        return r.nextInt(4) + 3;
     }
+
     public void drop() {
         Random r = new Random();
         int chance = r.nextInt() * 100;
@@ -167,13 +168,11 @@ public abstract class BattleLoc extends Location {
         }
     }
 
-
     public void afterHit() {
         System.out.println("Canınız: " + this.getPlayer().getHealth());
         System.out.println(this.getObstacle().getName() + " canı: " + this.getObstacle().getHealth());
 
     }
-
     public void playerStats() {
         System.out.println("Oyuncu değerleri");
         System.out.println("----------------");
