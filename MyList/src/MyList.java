@@ -178,7 +178,7 @@ Eğer dizide yeteri kadar yer yok ise, dizi boyutu 2 katına çıkartılmalıdı
     }
 
     public void clear() {
-        Arrays.fill(liste, null);
+
         liste = (T[]) new Object[0];
     }
 }
